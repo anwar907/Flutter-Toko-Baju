@@ -16,7 +16,7 @@ class FashionCard extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 120,
+              height: 90,
               width: 150,
               decoration: BoxDecoration(
                   color: Colors.grey[400],
@@ -31,6 +31,7 @@ class FashionCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
+                    height: 60,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadiusDirectional.only(
@@ -47,7 +48,7 @@ class FashionCard extends StatelessWidget {
                       ),
                       subtitle: Text(
                           NumberFormat.currency(
-                                  symbol: 'IDR',
+                                  symbol: 'IDR ',
                                   decimalDigits: 0,
                                   locale: 'id-ID')
                               .format(fashion.price),

@@ -145,11 +145,15 @@ class _HomePagesState extends State<HomePages> {
                 ),
               ),
               Container(
-                  width: double.infinity,
-                  height: 500,
+                  width: MediaQuery.of(context).size.width,
+                  height: 400,
                   color: Colors.transparent,
                   child: GridView.count(
                     crossAxisCount: 2,
+                    crossAxisSpacing: 20,
+                    shrinkWrap: true,
+                    mainAxisSpacing: 20,
+                    padding: EdgeInsets.all(8),
                     children: mockFashion
                         .map(
                           (e) => GestureDetector(

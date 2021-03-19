@@ -29,6 +29,7 @@ class _DetailPagesState extends State<DetailPages> {
 
   @override
   Widget build(BuildContext context) {
+    var string = '\u{1D11E}';
     return Scaffold(
       body: Stack(
         children: [
@@ -41,7 +42,7 @@ class _DetailPagesState extends State<DetailPages> {
           )),
           SafeArea(
               child: Container(
-                  height: 300,
+                  height: 250,
                   color: Colors.transparent,
                   width: double.infinity,
                   child: Image.asset(widget.product.fashion.picturePath))),
@@ -51,57 +52,8 @@ class _DetailPagesState extends State<DetailPages> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        height: 50,
-                        padding:
-                            EdgeInsets.symmetric(horizontal: defaultMargin),
-                        child: Align(
-                          alignment: Alignment.centerLeft,
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).pop();
-                            },
-                            child: Container(
-                              padding: EdgeInsets.all(3),
-                              height: 30,
-                              width: 30,
-                              decoration: BoxDecoration(
-                                  color: Colors.black12,
-                                  borderRadius: BorderRadius.circular(8)),
-                              child: Image.asset('assets/back_arrow_white.png'),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: 50,
-                        padding:
-                            EdgeInsets.symmetric(horizontal: defaultMargin),
-                        child: Align(
-                          alignment: Alignment.centerRight,
-                          child: GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                                padding: EdgeInsets.all(3),
-                                height: 40,
-                                width: 40,
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(15)),
-                                child: GestureDetector(
-                                  onTap: () {},
-                                  child: Icon(Icons.favorite_border),
-                                )),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
                   Container(
-                    margin: EdgeInsets.only(top: 220),
+                    margin: EdgeInsets.only(top: 200),
                     padding: EdgeInsets.symmetric(horizontal: 26, vertical: 16),
                     decoration: BoxDecoration(
                         color: Color(0xFFf7efef),
@@ -124,6 +76,7 @@ class _DetailPagesState extends State<DetailPages> {
                     ),
                   ),
                   Container(
+                    color: Color(0xFFf7efef),
                     padding: EdgeInsets.symmetric(horizontal: 26),
                     child: Text(
                       widget.product.fashion.description,
@@ -140,9 +93,15 @@ class _DetailPagesState extends State<DetailPages> {
                             "Item Size",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
+                          SizedBox(
+                            height: 10,
+                          ),
                           Text(
                             "${(widget.product.size)}",
                             style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            height: 10,
                           ),
                           Text(
                             "Color Items",
@@ -150,8 +109,11 @@ class _DetailPagesState extends State<DetailPages> {
                           ),
                           Container(
                               margin: EdgeInsets.fromLTRB(0, 4, 0, 41),
+                              height: 30,
+                              width: double.infinity,
                               child: ListView(
                                 shrinkWrap: true,
+                                scrollDirection: Axis.horizontal,
                                 children: widget.product.color
                                     .map((e) => Container(
                                             child: GestureDetector(
@@ -253,7 +215,56 @@ class _DetailPagesState extends State<DetailPages> {
                 ],
               ),
             ],
-          ))
+          )),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                height: 50,
+                margin: EdgeInsets.only(top: 25),
+                padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Container(
+                      padding: EdgeInsets.all(3),
+                      height: 30,
+                      width: 30,
+                      decoration: BoxDecoration(
+                          color: Colors.black12,
+                          borderRadius: BorderRadius.circular(8)),
+                      child: Image.asset('assets/back_arrow_white.png'),
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                height: 50,
+                margin: EdgeInsets.only(top: 25),
+                padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                        padding: EdgeInsets.all(3),
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(15)),
+                        child: GestureDetector(
+                          onTap: () {},
+                          child: Icon(Icons.favorite_border),
+                        )),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
