@@ -221,7 +221,7 @@ class _DetailPagesState extends State<DetailPages> {
             children: [
               Container(
                 height: 50,
-                margin: EdgeInsets.only(top: 25),
+                margin: EdgeInsets.only(top: 30),
                 padding: EdgeInsets.symmetric(horizontal: defaultMargin),
                 child: Align(
                   alignment: Alignment.centerLeft,
@@ -243,7 +243,7 @@ class _DetailPagesState extends State<DetailPages> {
               ),
               Container(
                 height: 50,
-                margin: EdgeInsets.only(top: 25),
+                margin: EdgeInsets.only(top: 30),
                 padding: EdgeInsets.symmetric(horizontal: defaultMargin),
                 child: Align(
                   alignment: Alignment.centerRight,
