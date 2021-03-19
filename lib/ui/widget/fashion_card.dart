@@ -8,7 +8,7 @@ class FashionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(
-            color: Colors.white,
+            color: Colors.transparent,
             borderRadius: BorderRadius.circular(8),
             boxShadow: [
               BoxShadow(spreadRadius: 1, blurRadius: 10, color: Colors.black12)
@@ -17,12 +17,14 @@ class FashionCard extends StatelessWidget {
           children: [
             Container(
               height: 120,
+              width: 150,
               decoration: BoxDecoration(
-                  color: Colors.transparent,
-                  borderRadius: BorderRadiusDirectional.circular(10),
-                  image: DecorationImage(
-                      image: NetworkImage(fashion.picturePath),
-                      fit: BoxFit.cover)),
+                  color: Colors.grey[400],
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10),
+                    topRight: Radius.circular(10),
+                  )),
+              child: Image.asset(fashion.picturePath),
             ),
             Container(
               child: Column(

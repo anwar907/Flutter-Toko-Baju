@@ -41,20 +41,16 @@ class _DetailPagesState extends State<DetailPages> {
           )),
           SafeArea(
               child: Container(
-            height: 300,
-            width: double.infinity,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: NetworkImage(widget.product.fashion.picturePath),
-                    fit: BoxFit.cover)),
-          )),
+                  height: 300,
+                  color: Colors.transparent,
+                  width: double.infinity,
+                  child: Image.asset(widget.product.fashion.picturePath))),
           SafeArea(
               child: ListView(
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  //tombol kembali
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
