@@ -2,7 +2,8 @@
 
 A new Flutter project.
 
-## Getting Started
+## Sample Image
+![github-large](https://github.com/anwar907/Flutter-Toko-Baju/blob/master/assets/baju.png)
 
 This project is a starting point for a Flutter application.
 
