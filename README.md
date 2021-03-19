@@ -3,8 +3,8 @@
 A new Flutter project.
 
 ## Sample Image
-![github-large](https://github.com/anwar907/Flutter-Toko-Baju/blob/master/assets/baju.png)
-
+![github-large](https://github.com/anwar907/Flutter-Toko-Baju/blob/master/img/home.png)
+![github-large](https://github.com/anwar907/Flutter-Toko-Baju/blob/master/img/detail.png)
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
